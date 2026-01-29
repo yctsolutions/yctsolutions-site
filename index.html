@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YCT Solutions | Power Conversion & Marine Electrification</title>
+  <meta name="description" content="YCT Solutions는 전력변환장치(인버터/컨버터) 및 해양 전기추진 시스템 엔지니어링·시운전·서비스를 제공합니다." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="YCT Solutions" />
+  <meta property="og:description" content="Power Conversion & Marine Electrification" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yctsolutions.co.kr" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a31;
+      --text:#e8eefc;
+      --muted:#b7c4e6;
+      --line:rgba(255,255,255,.10);
+      --accent:#3b82f6;
+      --accent2:#22c55e;
+      --shadow: 0 14px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic", Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(59,130,246,.35), transparent 60%),
+        radial-gradient(900px 500px at 80% 0%, rgba(34,197,94,.18), transparent 55%),
+        radial-gradient(800px 500px at 70% 90%, rgba(59,130,246,.12), transparent 55%),
+        var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.55);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+    }
+    .brand{
+      display:flex; gap:10px; align-items:center;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .logo{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(34,197,94,.85));
+      box-shadow: 0 10px 24px rgba(59,130,246,.22);
+    }
+    .menu{display:flex; gap:18px; align-items:center; font-weight:600; color:var(--muted)}
+    .menu a{padding:8px 10px; border-radius:12px}
+    .menu a:hover{background: rgba(255,255,255,.06); color:var(--text)}
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:700;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.16)}
+    .btn.primary{
+      border: none;
+      background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(59,130,246,.65));
+      box-shadow: 0 14px 30px rgba(59,130,246,.22);
+    }
+    .btn.primary:hover{background: linear-gradient(135deg, rgba(59,130,246,1), rgba(59,130,246,.70))}
+    .hero{
+      padding:54px 0 26px;
+    }
+    .hero-grid{
+      display:grid; gap:18px;
+      grid-template-columns: 1.2fr .8fr;
+      align-items:stretch;
+    }
+    .card{
+      background: rgba(15,26,49,.72);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-main{padding:26px}
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      font-weight:700;
+      font-size:13px;
+      margin-bottom:14px;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:99px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(59,130,246,.15);
+    }
+    h1{
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height:1.12;
+      letter-spacing: -.4px;
+    }
+    .sub{
+      margin:0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .badges{
+      display:flex; flex-wrap:wrap; gap:10px; margin: 18px 0 0;
+    }
+    .badge{
+      padding:9px 12px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-weight:700;
+      font-size: 13px;
+    }
+    .hero-side{padding:18px}
+    .metric{
+      padding:16px;
+      border-bottom:1px solid var(--line);
+    }
+    .metric:last-child{border-bottom:none}
+    .metric .t{color:var(--muted); font-weight:700; font-size:13px}
+    .metric .v{margin-top:6px; font-weight:900; font-size:18px}
+    .metric .d{margin-top:6px; color:var(--muted); font-size:13px}
+
+    .section{padding: 22px 0}
+    .section h2{
+      margin:0 0 10px;
+      font-size: 22px;
+      letter-spacing:-.2px;
+    }
+    .section p{margin:0; color:var(--muted)}
+    .grid-3{
+      margin-top:14px;
+      display:grid; gap:14px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .tile{padding:18px}
+    .tile h3{margin:0 0 8px; font-size:16px}
+    .tile p{margin:0; color:var(--muted); font-size:14px}
+    .list{
+      margin-top:14px;
+      display:grid; gap:12px;
+      grid-template-columns: 1fr 1fr;
+    }
+    .row{
+      padding:16px 18px;
+      display:flex; gap:12px; align-items:flex-start;
+    }
+    .icon{
+      width:38px; height:38px;
+      border-radius:14px;
+      background: rgba(59,130,246,.14);
+      border:1px solid rgba(59,130,246,.28);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900;
+      color: var(--text);
+      flex: 0 0 auto;
+    }
+    .row b{display:block; margin-bottom:4px}
+    .row span{display:block; color:var(--muted); font-size:14px}
+
+    .contact{
+      display:grid; gap:14px;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 14px;
+    }
+    .contact .box{padding:18px}
+    .kv{display:grid; gap:8px; margin-top:10px}
+    .kv div{display:flex; gap:10px; align-items:center; color:var(--muted); font-weight:700}
+    .kv code{
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+      padding: 4px 8px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+      word-break: break-all;
+    }
+    footer{
+      border-top: 1px solid var(--line);
+      margin-top: 22px;
+      padding: 18px 0 30px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .foot{
+      display:flex; gap:10px; justify-content:space-between; align-items:center;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns: 1fr}
+      .grid-3{grid-template-columns: 1fr}
+      .list{grid-template-columns: 1fr}
+      .contact{grid-template-columns: 1fr}
+      .menu{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-size:14px; opacity:.95;">YCT Solutions</div>
+          <div style="font-size:12px; color:var(--muted); font-weight:700;">Power Conversion & Marine Electrification</div>
+        </div>
+      </div>
+
+      <nav class="menu" aria-label="메인 메뉴">
+        <a href="#services">서비스</a>
+        <a href="#solutions">솔루션</a>
+        <a href="#process">프로세스</a>
+        <a href="#contact">문의</a>
+      </nav>
+
+      <div class="cta">
+        <a class="btn" href="#contact">상담하기</a>
+        <a class="btn primary" href="mailto:contact@yctsolutions.co.kr">이메일</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="card hero-main">
+          <div class="kicker"><span class="dot"></span> 현장 중심 엔지니어링 · 빠른 대응</div>
+          <h1>전력변환 시스템을<br/>설계·제작·시운전·서비스까지</h1>
+          <p class="sub">
+            YCT Solutions는 <b>인버터/컨버터 기반 전력변환장치</b>와 <b>해양 전기추진/산업용 구동 시스템</b>에 대한
+            엔지니어링, 패널 제작, 커미셔닝, 유지보수 서비스를 제공합니다.
+          </p>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="#contact">프로젝트 상담 요청</a>
+            <a class="btn" href="#services">서비스 보기</a>
+          </div>
+
+          <div class="badges" aria-label="핵심 키워드">
+            <span class="badge">iC7 기반 AFE/INU 패키지</span>
+            <span class="badge">전기추진 시스템 시운전</span>
+            <span class="badge">모듈형 패널/랙 구성</span>
+            <span class="badge">고장예지 진단(옵션)</span>
+          </div>
+        </div>
+
+        <aside class="card hero-side" aria-label="요약 정보">
+          <div class="metric">
+            <div class="t">전문 영역</div>
+            <div class="v">Power Conversion</div>
+            <div class="d">AFE / INU / DC-DC · 구동/회생 · 필터/배전</div>
+          </div>
+          <div class="metric">
+            <div class="t">적용 산업</div>
+            <div class="v">Marine · Industrial</div>
+            <div class="d">관공선/민간선 · 케이블카/설비 구동</div>
+          </div>
+          <div class="metric">
+            <div class="t">제공 형태</div>
+            <div class="v">Engineering + Service</div>
+            <div class="d">설계/제작/납품/시운전/AS까지 원스톱</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <h2>주요 서비스</h2>
+        <p>프로젝트 초기 검토부터 납품 이후 유지보수까지, 현장 요구에 맞춘 엔지니어링을 제공합니다.</p>
+
+        <div class="grid-3">
+          <div class="card tile">
+            <h3>전력변환 패널 제작</h3>
+            <p>인버터/컨버터 패널, LCL/EMI 필터, 배선·버스바 구성, 안전·접지 설계.</p>
+          </div>
+          <div class="card tile">
+            <h3>시운전 · 커미셔닝</h3>
+            <p>파라미터 튜닝, 보호 로직 검증, 계통 연계/회생 운전, 성능 시험 및 인수 지원.</p>
+          </div>
+          <div class="card tile">
+            <h3>유지보수 · 현장 대응</h3>
+            <p>장애 분석, 부품 교체, 예방점검, 원격/현장 지원. 다운타임 최소화 중심.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solutions">
+      <div class="wrap">
+        <h2>솔루션 구성(예시)</h2>
+        <p>다음 구성은 대표적인 레퍼런스 형태이며, 요구 전압/용량/환경에 따라 커스터마이징 가능합니다.</p>
+
+        <div class="list">
+          <div class="card row">
+            <div class="icon">A</div>
+            <div>
+              <b>AFE (Active Front End)</b>
+              <span>회생 운전 및 전원 품질 개선. 계통 연계·고조파·역률 대응.</span>
+            </div>
+          </div>
+          <div class="card row">
+            <div class="icon">I</div>
+            <div>
+              <b>INU (Inverter Unit)</b>
+              <span>모터 구동(토크/속도 제어), 보호 설정, 운전 모드 최적화.</span>
+            </div>
+          </div>
+          <div class="card row">
+            <div class="icon">D</div>
+            <div>
+              <b>DC-DC (Battery / DC Bus)</b>
+              <span>배터리-DC 링크 간 전압 변동 대응, 고효율 변환 및 리플 최소화.</span>
+            </div>
+          </div>
+          <div class="card row">
+            <div class="icon">S</div>
+            <div>
+              <b>Service & Diagnostics</b>
+              <span>고장 원인 분석, 로그/트렌드 기반 예방점검(옵션), 현장 대응 프로세스.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="wrap">
+        <h2>프로젝트 진행 프로세스</h2>
+        <p>의사결정이 빠르게 진행될 수 있도록, 단계별 산출물을 명확히 제공합니다.</p>
+
+        <div class="grid-3">
+          <div class="card tile">
+            <h3>1) 요구사항 정의</h3>
+            <p>용량/전압/환경/규격(인증) 확인 · 리스크 식별 · 일정/예산 정렬</p>
+          </div>
+          <div class="card tile">
+            <h3>2) 설계 · 제작</h3>
+            <p>단선도/배치/배선 · 부품 선정 · 패널 제작 · FAT(공장 시험)</p>
+          </div>
+          <div class="card tile">
+            <h3>3) 시운전 · 인수</h3>
+            <p>SAT(현장 시험) · 파라미터 튜닝 · 운전 매뉴얼/교육 · AS 체계 확정</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <h2>문의</h2>
+        <p>간단히 정보만 남겨주셔도 됩니다. (아래 정보는 YC가 수정해서 넣으면 됩니다)</p>
+
+        <div class="contact">
+          <div class="card box">
+            <h3 style="margin:0 0 8px;">연락처</h3>
+            <div class="kv">
+              <div>이메일 <code>contact@yctsolutions.co.kr</code></div>
+              <div>전화 <code>010-0000-0000</code></div>
+              <div>주소 <code>부산광역시 (주소 입력)</code></div>
+            </div>
+            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn primary" href="mailto:contact@yctsolutions.co.kr?subject=YCT%20Solutions%20%EC%83%81%EB%8B%B4%20%EC%9A%94%EC%B2%AD&body=%EC%84%B1%ED%95%A8%3A%0A%ED%9A%8C%EC%82%AC%2F%EC%86%8C%EC%86%8D%3A%0A%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A%EC%9A%94%EC%B2%AD%20%EB%82%B4%EC%9A%A9%3A%0A">이메일로 상담 요청</a>
+              <a class="btn" href="#services">서비스 다시 보기</a>
+            </div>
+          </div>
+
+          <div class="card box">
+            <h3 style="margin:0 0 8px;">프로젝트 정보(권장)</h3>
+            <p style="color:var(--muted); margin:0;">
+              아래 항목을 메일에 포함하면 검토 속도가 빨라집니다.
+            </p>
+            <ul style="margin:10px 0 0; color:var(--muted); padding-left:18px;">
+              <li>적용 분야(선박/설비/케이블카 등)</li>
+              <li>용량(kW) / 전압(Vdc/Vac) / 주파수(Hz)</li>
+              <li>운전 모드(회생/역률/정지 절체 등)</li>
+              <li>납기/예산/인증 요구사항</li>
+            </ul>
+          </div>
+        </div>
+
+        <footer>
+          <div class="foot wrap" style="padding:0;">
+            <div>© <span id="y"></span> YCT Solutions. All rights reserved.</div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+              <a href="#services">서비스</a>
+              <a href="#solutions">솔루션</a>
+              <a href="#process">프로세스</a>
+              <a href="#contact">문의</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
