@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_ref/
+
+Sitemap: https://www.yctsolutions.co.kr/sitemap.xml
